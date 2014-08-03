@@ -1,2 +1,5 @@
+#Cache
+.sass-cache/
+
 node_modules/
 public/js/vendors/
