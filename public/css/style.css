@@ -9,22 +9,32 @@ main, header, nav, footer, article, section, aside, figure, figcaption, fieldset
   width: 0;
   height: 0; }
 
-.clearfix, .main_header {
+.clearfix, .main_header, .wrap {
   zoom: 1; }
-  .clearfix:before, .main_header:before, .clearfix:after, .main_header:after {
+  .clearfix:before, .main_header:before, .wrap:before, .clearfix:after, .main_header:after, .wrap:after {
     content: '\0020';
     display: block;
     overflow: hidden;
     visibility: hidden;
     width: 0;
     height: 0; }
-  .clearfix:after, .main_header:after {
+  .clearfix:after, .main_header:after, .wrap:after {
     clear: both; }
+
+.l, .main_header, .wrap, .footer {
+  padding: 0 10%; }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Helvetica Neue', 'HelveticaNeue', sans-serif; }
+
+a {
+  color: #404040; }
+
+img {
+  width: 100%;
+  height: auto; }
 
 .main_header {
   background: #93648d; }
@@ -37,11 +47,81 @@ body {
       height: auto; }
 
 .top_nav ul {
-  margin: 0;
+  margin: 20px 0 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  float: right; }
   .top_nav ul li {
     float: left; }
     .top_nav ul li a {
-      color: #404040;
+      display: block;
+      margin-left: 10px;
+      color: #000;
       text-decoration: none; }
+      .top_nav ul li a:hover {
+        color: #404040; }
+
+.wrap {
+  padding-top: 20px;
+  background: #f16745; }
+
+.main_content {
+  background: #f16745;
+  box-sizing: border-box; }
+
+.sidebar {
+  float: left;
+  width: calc(25% - 20px);
+  margin: 10px;
+  padding: 20px;
+  background: #ffc65d;
+  box-sizing: border-box; }
+  .sidebar h3 {
+    font-size: 16px;
+    margin-top: 0; }
+  .sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+
+.top_new {
+  float: left;
+  width: calc(50% - 20px);
+  padding: 20px;
+  margin: 10px;
+  background: #fff;
+  box-sizing: border-box; }
+  .top_new header h1 {
+    margin-top: 0; }
+
+.small_new {
+  float: left;
+  width: calc(25% - 20px);
+  padding: 20px;
+  margin: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box; }
+  .small_new h1 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 14px; }
+  .small_new p {
+    display: none;
+    font-size: 13px;
+    margin-top: 0; }
+  .small_new figure {
+    width: 100%;
+    padding: 2px 2px 0;
+    margin: 0;
+    background: #7bc8a4;
+    box-sizing: border-box; }
+  .small_new figcaption {
+    font-size: 11px;
+    line-height: 16px;
+    vertical-align: middle;
+    color: #404040;
+    text-align: center; }
+
+.footer {
+  background: #7bc8a4; }

@@ -27,9 +27,22 @@ main, header, nav, footer, article, section, aside, figure, figcaption, fieldset
   zoom: 1;
 }
 
+.l {
+  padding: 0 10%;
+}
+
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Helvetica Neue', 'HelveticaNeue', sans-serif;
+}
+
+a {
+  color: $dark_gray;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }

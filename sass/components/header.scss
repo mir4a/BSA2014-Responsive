@@ -3,6 +3,7 @@ $logo_height: 30px;
 .main_header {
   background: $magenta;
   @extend .clearfix;
+  @extend .l;
   .logo {
     display: block;
     width: $logo_width;
@@ -16,14 +17,20 @@ $logo_height: 30px;
 
 .top_nav {
   ul {
-    margin: 0;
+    margin: 20px 0 0;
     padding: 0;
     list-style: none;
+    float: right;
     li {
       float: left;
       a {
-        color: $dark_gray;
+        display: block;
+        margin-left: 10px;
+        color: #000;
         text-decoration: none;
+        &:hover {
+          color: $dark_gray;
+        }
       }
     }
   }
