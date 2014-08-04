@@ -69,6 +69,9 @@ $top_new_height: 700px;
       background: transparentize(#fff, 0.25);
       z-index: 1;
     }
+    .see_more {
+      display: block;
+    }
   }
   h1 {
     font-size: 18px;
@@ -89,6 +92,26 @@ $top_new_height: 700px;
     }
     a {
       border-bottom: 0;
+    }
+  }
+  .see_more {
+    $see_more_height: 30px;
+    line-height: $see_more_height;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: $see_more_height;
+    border-bottom: none;
+    background: $blue;
+    z-index: 3;
+    &:hover {
+      color: #fff;
+      background: $green;
     }
   }
   p {

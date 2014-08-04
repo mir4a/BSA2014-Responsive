@@ -129,6 +129,8 @@ img {
       position: relative;
       background: rgba(255, 255, 255, 0.75);
       z-index: 1; }
+    .small_new:hover .see_more {
+      display: block; }
   .small_new h1 {
     font-size: 18px;
     float: left;
@@ -147,6 +149,23 @@ img {
       border-color: #7bc8a4; }
     .small_new h1 a {
       border-bottom: 0; }
+  .small_new .see_more {
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30px;
+    border-bottom: none;
+    background: #4cc3d9;
+    z-index: 3; }
+    .small_new .see_more:hover {
+      color: #fff;
+      background: #7bc8a4; }
   .small_new p {
     display: none;
     font-size: 13px;
