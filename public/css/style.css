@@ -21,7 +21,7 @@ main, header, nav, footer, article, section, aside, figure, figcaption, fieldset
   .clearfix:after, .main_header:after, .top_nav ul:after, .wrap:after, .top_new header:after {
     clear: both; }
 
-.l, .main_header, .wrap, .footer {
+.l, .main_header, .footer {
   padding: 0 10%; }
 
 body {
@@ -83,8 +83,22 @@ small {
   background: #ffc65d; }
 
 .wrap {
-  padding-top: 10px;
   background: #f16745; }
+  @media (max-width: 767px) {
+    .wrap {
+      padding: 10px; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .wrap {
+      padding: 10px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .wrap {
+      padding: 10px; } }
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .wrap {
+      padding: 10px 10% 0; } }
+  @media (min-width: 1440px) {
+    .wrap {
+      padding: 10px; } }
 
 .main_content {
   background: #f16745;
@@ -107,13 +121,27 @@ figcaption {
 
 .top_new {
   float: left;
-  width: calc(50% - 20px);
   padding: 20px;
   margin: 10px;
   height: 700px;
   overflow: hidden;
   background: #fff;
   box-sizing: border-box; }
+  @media (max-width: 767px) {
+    .top_new {
+      width: calc(100% - 20px); } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .top_new {
+      width: calc(66% - 20px); } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .top_new {
+      width: calc(50% - 20px); } }
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .top_new {
+      width: calc(50% - 20px); } }
+  @media (min-width: 1440px) {
+    .top_new {
+      width: calc(40% - 20px); } }
   .top_new h2 {
     font-size: 16px;
     margin-top: 10px;
@@ -151,6 +179,21 @@ figcaption {
   padding: 20px;
   background: #ffc65d;
   box-sizing: border-box; }
+  @media (max-width: 767px) {
+    .sidebar {
+      width: calc(100% - 20px); } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .sidebar {
+      width: calc(33% - 20px); } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .sidebar {
+      width: calc(25% - 20px); } }
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .sidebar {
+      width: calc(25% - 20px); } }
+  @media (min-width: 1440px) {
+    .sidebar {
+      width: calc(20% - 20px); } }
   .sidebar h3 {
     font-size: 16px;
     margin-top: 0; }
@@ -164,7 +207,6 @@ figcaption {
 
 .small_new {
   float: left;
-  width: calc(25% - 20px);
   height: calc(350px - 10px);
   padding: 20px;
   margin: 10px;
@@ -172,16 +214,29 @@ figcaption {
   overflow: hidden;
   background: #fff;
   box-sizing: border-box; }
-  .small_new:hover {
-    overflow: visible; }
-    .small_new:hover p {
-      display: block;
-      height: 100%;
-      position: relative;
-      background: rgba(255, 255, 255, 0.75);
-      z-index: 1; }
-    .small_new:hover .see_more {
-      display: block; }
+  @media (max-width: 767px) {
+    .small_new {
+      width: calc(100% - 20px); } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .small_new {
+      width: calc(33% - 20px); } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .small_new {
+      width: calc(25% - 20px); } }
+  @media (min-width: 1200px) and (max-width: 1439px) {
+    .small_new {
+      width: calc(25% - 20px); } }
+  @media (min-width: 1440px) {
+    .small_new {
+      width: calc(20% - 20px); } }
+  .small_new:hover p {
+    display: block;
+    height: 100%;
+    position: relative;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: 1; }
+  .small_new:hover .see_more {
+    display: block; }
   .small_new h1 {
     font-size: 18px;
     float: left;
