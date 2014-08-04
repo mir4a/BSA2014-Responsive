@@ -60,18 +60,29 @@ $top_new_height: 700px;
   overflow: hidden;
   background: #fff;
   box-sizing: border-box;
+  &:hover {
+    overflow: visible;
+    p {
+      display: block;
+      height: 100%;
+      position: relative;
+      background: transparentize(#fff, 0.25);
+      z-index: 1;
+    }
+  }
   h1 {
     font-size: 18px;
-    display: inline-block;
+    float: left;
     position: relative;
-    padding-left: 2px;
+    padding-left: 4px;
     padding-right: 4px;
     margin-top: 0;
-    margin-bottom: 14px;
+    margin-right: 5px;
+    margin-bottom: 4px;
     background: transparentize(#fff,0.25);
     border-right: 2px solid transparent;
     border-bottom: 2px solid transparent;
-    z-index: 1;
+    z-index: 2;
     &:hover {
       background: #fff;
       border-color: $green;

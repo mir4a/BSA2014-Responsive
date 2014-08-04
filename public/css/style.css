@@ -121,18 +121,27 @@ img {
   overflow: hidden;
   background: #fff;
   box-sizing: border-box; }
+  .small_new:hover {
+    overflow: visible; }
+    .small_new:hover p {
+      display: block;
+      height: 100%;
+      position: relative;
+      background: rgba(255, 255, 255, 0.75);
+      z-index: 1; }
   .small_new h1 {
     font-size: 18px;
-    display: inline-block;
+    float: left;
     position: relative;
-    padding-left: 2px;
+    padding-left: 4px;
     padding-right: 4px;
     margin-top: 0;
-    margin-bottom: 14px;
+    margin-right: 5px;
+    margin-bottom: 4px;
     background: rgba(255, 255, 255, 0.75);
     border-right: 2px solid transparent;
     border-bottom: 2px solid transparent;
-    z-index: 1; }
+    z-index: 2; }
     .small_new h1:hover {
       background: #fff;
       border-color: #7bc8a4; }
