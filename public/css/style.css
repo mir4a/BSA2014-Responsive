@@ -48,35 +48,59 @@ small {
 
 .main_header {
   position: relative;
-  height: 70px;
   background: #93648d; }
+  @media (max-width: 767px) {
+    .main_header {
+      height: auto; }
+      .main_header .logo {
+        float: none;
+        height: auto; }
+        .main_header .logo > img {
+          width: 100%;
+          height: auto; } }
+  @media (min-width: 768px) {
+    .main_header {
+      height: 70px; }
+      .main_header .logo {
+        float: left;
+        height: 100%; }
+        .main_header .logo > img {
+          width: auto;
+          height: 100%; } }
   .main_header .logo {
-    display: block;
-    height: 100%;
-    float: left; }
-    .main_header .logo > img {
-      width: auto;
-      height: 100%; }
+    display: block; }
 
-.top_nav {
-  float: right; }
-  .top_nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
+@media (max-width: 767px) {
+  .top_nav {
+    float: none; }
+    .top_nav ul {
+      text-align: center; }
+      .top_nav ul li {
+        float: none;
+        width: 100%; }
+        .top_nav ul li a {
+          height: auto;
+          line-height: 130%; } }
+@media (min-width: 768px) {
+  .top_nav {
+    float: right; }
     .top_nav ul li {
-      float: left; }
-      .top_nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        line-height: 70px;
-        vertical-align: middle;
-        display: block;
-        height: 70px;
-        margin-left: 10px;
-        padding: 0 10px; }
-        .top_nav ul li a:hover {
-          background: #f16745; }
+      float: left; } }
+.top_nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .top_nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 70px;
+    vertical-align: middle;
+    display: block;
+    height: 70px;
+    margin-left: 10px;
+    padding: 0 10px; }
+    .top_nav ul li a:hover {
+      background: #f16745; }
 
 ::selection {
   color: #f16745;
@@ -87,13 +111,13 @@ small {
   @media (max-width: 767px) {
     .wrap {
       padding: 10px 5px; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 768px) {
     .wrap {
       padding: 10px; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media (min-width: 992px) {
     .wrap {
       padding: 10px; } }
-  @media (min-width: 1200px) and (max-width: 1439px) {
+  @media (min-width: 1200px) {
     .wrap {
       padding: 10px 10% 0; } }
   @media (min-width: 1440px) {
@@ -131,13 +155,13 @@ figcaption {
     .top_new {
       width: calc(100% - 20px);
       height: inherit; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 768px) {
     .top_new {
       width: calc(66% - 20px); } }
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media (min-width: 992px) {
     .top_new {
       width: calc(50% - 20px); } }
-  @media (min-width: 1200px) and (max-width: 1439px) {
+  @media (min-width: 1200px) {
     .top_new {
       width: calc(50% - 20px); } }
   @media (min-width: 1440px) {
@@ -184,13 +208,13 @@ figcaption {
     .sidebar {
       width: calc(100% - 20px);
       height: inherit; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 768px) {
     .sidebar {
       width: calc(33% - 20px); } }
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media (min-width: 992px) {
     .sidebar {
       width: calc(25% - 20px); } }
-  @media (min-width: 1200px) and (max-width: 1439px) {
+  @media (min-width: 1200px) {
     .sidebar {
       width: calc(25% - 20px); } }
   @media (min-width: 1440px) {
@@ -230,7 +254,7 @@ figcaption {
         display: block; }
       .small_new .see_more {
         display: block; } }
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 768px) {
     .small_new {
       width: calc(33% - 20px);
       height: calc(350px - 10px);
@@ -253,7 +277,7 @@ figcaption {
         overflow: hidden; }
         .small_new .see_more_wrap .see_more {
           display: none; } }
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media (min-width: 992px) {
     .small_new {
       width: calc(25% - 20px);
       height: calc(350px - 10px);
@@ -276,7 +300,7 @@ figcaption {
         overflow: hidden; }
         .small_new .see_more_wrap .see_more {
           display: none; } }
-  @media (min-width: 1200px) and (max-width: 1439px) {
+  @media (min-width: 1200px) {
     .small_new {
       width: calc(25% - 20px);
       height: calc(350px - 10px);

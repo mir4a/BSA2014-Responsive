@@ -4,28 +4,63 @@ $header_height: 70px;
   position: relative;
   @extend .clearfix;
   @extend .l;
-  height: $header_height;
   background: $magenta;
+  @include breakpoint(xs) {
+    height: auto;
+    .logo {
+      float: none;
+      height: auto;
+      > img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  @include breakpoint(sm) {
+    height: $header_height;
+    .logo {
+      float: left;
+      height: 100%;
+      > img {
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
   .logo {
     display: block;
-    height: 100%;
-    float: left;
-    > img {
-      width: auto;
-      height: 100%;
-    }
   }
 }
 
 .top_nav {
-  float: right;
+  @include breakpoint(xs) {
+    float: none;
+    ul {
+      text-align: center;
+      li {
+        float: none;
+        width: 100%;
+        a {
+          height: auto;
+          line-height: 130%;
+        }
+      }
+    }
+  }
+  @include breakpoint(sm) {
+    float: right;
+    ul {
+      li {
+        float: left;
+      }
+    }
+  }
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
     @extend .clearfix;
     li {
-      float: left;
       a {
         color: #fff;
         text-decoration: none;
