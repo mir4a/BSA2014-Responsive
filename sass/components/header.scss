@@ -1,0 +1,30 @@
+$logo_width: 180px;
+$logo_height: 30px;
+.main_header {
+  background: $magenta;
+  @extend .clearfix;
+  .logo {
+    display: block;
+    width: $logo_width;
+    float: left;
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.top_nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      float: left;
+      a {
+        color: $dark_gray;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,5 +1,30 @@
-header, nav, footer, article, section, aside, figure, figcaption, fieldset {
+main, header, nav, footer, article, section, aside, figure, figcaption, fieldset, time {
   display: block;
+}
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+  zoom: 1;
 }
 
 

@@ -1,7 +1,47 @@
-header, nav, footer, article, section, aside, figure, figcaption, fieldset {
+main, header, nav, footer, article, section, aside, figure, figcaption, fieldset, time {
   display: block; }
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+.clearfix, .main_header {
+  zoom: 1; }
+  .clearfix:before, .main_header:before, .clearfix:after, .main_header:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0; }
+  .clearfix:after, .main_header:after {
+    clear: both; }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Helvetica Neue', 'HelveticaNeue', sans-serif; }
+
+.main_header {
+  background: #93648d; }
+  .main_header .logo {
+    display: block;
+    width: 180px;
+    float: left; }
+    .main_header .logo > img {
+      width: 100%;
+      height: auto; }
+
+.top_nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .top_nav ul li {
+    float: left; }
+    .top_nav ul li a {
+      color: #404040;
+      text-decoration: none; }
