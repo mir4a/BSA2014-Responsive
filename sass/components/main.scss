@@ -1,18 +1,39 @@
 .wrap {
   @extend .l;
   @extend .clearfix;
-  padding-top: 20px;
+  padding-top: 10px;
   background: $orange;
 }
 
 .main_content {
   background: $orange;
   box-sizing: border-box;
+  a {
+    @extend .smooth_link;
+  }
+}
+
+$top_new_height: 700px;
+.top_new {
+  float: left;
+  width: calc(50% - 20px);
+  padding: 20px;
+  margin: 10px;
+  height: $top_new_height;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
+  header {
+    h1 {
+      margin-top: 0;
+    }
+  }
 }
 
 .sidebar {
   float: left;
   width: calc(25% - 20px);
+  height: calc(#{$top_new_height/2} - 10px);
   margin: 10px;
   padding: 20px;
   background: $yellow;
@@ -28,33 +49,36 @@
   }
 }
 
-.top_new {
-  float: left;
-  width: calc(50% - 20px);
-  padding: 20px;
-  margin: 10px;
-  background: #fff;
-  box-sizing: border-box;
-  header {
-    h1 {
-      margin-top: 0;
-    }
-  }
-}
 
 .small_new {
   float: left;
   width: calc(25% - 20px);
-//  height: 350px;
+  height: calc(#{$top_new_height/2} - 10px);
   padding: 20px;
   margin: 10px;
+  position: relative;
   overflow: hidden;
   background: #fff;
   box-sizing: border-box;
   h1 {
     font-size: 18px;
+    display: inline-block;
+    position: relative;
+    padding-left: 2px;
+    padding-right: 4px;
     margin-top: 0;
     margin-bottom: 14px;
+    background: transparentize(#fff,0.25);
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    z-index: 1;
+    &:hover {
+      background: #fff;
+      border-color: $green;
+    }
+    a {
+      border-bottom: 0;
+    }
   }
   p {
     display: none;
@@ -62,11 +86,19 @@
     margin-top: 0;
   }
   figure {
-    width: 100%;
-    padding: 2px 2px 0;
+    font-size: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
     margin: 0;
-    background: $green;
     box-sizing: border-box;
+    img {
+      max-height: calc(100% - 20px);
+      border: 2px solid $green;
+      box-sizing: border-box;
+    }
   }
   figcaption {
     font-size: 11px;
@@ -74,5 +106,6 @@
     vertical-align: middle;
     color: $dark_gray;
     text-align: center;
+    background: $green;
   }
 }

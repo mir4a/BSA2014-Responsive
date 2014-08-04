@@ -42,6 +42,15 @@ a {
   color: $dark_gray;
 }
 
+.smooth_link {
+  text-decoration: none;
+  border-bottom: 1px solid transparentize($dark_gray,0.5);
+  &:hover {
+    color: lighten($dark_gray, 5%);
+    border-bottom-color: $dark_gray;
+  }
+}
+
 img {
   width: 100%;
   height: auto;
