@@ -1,4 +1,30 @@
 .footer {
-  @extend .l;
+  padding: 10px;
+  @extend .clearfix;
   background: $green;
+  .copy {
+    float: left;
+  }
+}
+
+.footer_nav {
+  @include breakpoint(xs) {
+    display: none;
+  }
+  ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      float: left;
+      a {
+        display: block;
+        padding: 3px 10px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
