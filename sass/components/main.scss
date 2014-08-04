@@ -1,3 +1,8 @@
+::selection {
+  color: $orange;
+  background: $yellow;
+}
+
 .wrap {
   @extend .l;
   @extend .clearfix;
@@ -12,6 +17,22 @@
     @extend .smooth_link;
   }
 }
+figure {
+  font-size: 0;
+  box-sizing: border-box;
+  img {
+    border: 2px solid $green;
+    box-sizing: border-box;
+  }
+}
+figcaption {
+  font-size: 11px;
+  line-height: 16px;
+  vertical-align: middle;
+  color: $dark_gray;
+  text-align: center;
+  background: $green;
+}
 
 $top_new_height: 700px;
 .top_new {
@@ -23,10 +44,44 @@ $top_new_height: 700px;
   overflow: hidden;
   background: #fff;
   box-sizing: border-box;
+  h2 {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
   header {
+    @extend .clearfix;
     h1 {
       margin-top: 0;
+      margin-bottom: 10px;
     }
+    time {
+      font-size: 12px;
+      color: $dark_gray;
+      float: left;
+      &:before {
+        content: 'Published: ';
+        color: $orange;
+      }
+    }
+    .author {
+      float: right;
+      font-size: 12px;
+      color: $dark_gray;
+      &:before {
+        content: 'Author: ';
+        color: $orange;
+      }
+    }
+  }
+  figure {
+    width: 60%;
+    float: left;
+    margin: 5px 10px 5px 0;
   }
 }
 
@@ -46,6 +101,10 @@ $top_new_height: 700px;
     margin: 0;
     padding: 0;
     list-style: none;
+    li {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -94,6 +153,14 @@ $top_new_height: 700px;
       border-bottom: 0;
     }
   }
+  .see_more_wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+  }
   .see_more {
     $see_more_height: 30px;
     line-height: $see_more_height;
@@ -109,6 +176,7 @@ $top_new_height: 700px;
     border-bottom: none;
     background: $blue;
     z-index: 3;
+    box-shadow: 0 -15px 25px 5px #fff;
     &:hover {
       color: #fff;
       background: $green;
@@ -120,26 +188,11 @@ $top_new_height: 700px;
     margin-top: 0;
   }
   figure {
-    font-size: 0;
     position: absolute;
     top: 20px;
     right: 20px;
     bottom: 20px;
     left: 20px;
     margin: 0;
-    box-sizing: border-box;
-    img {
-      max-height: calc(100% - 20px);
-      border: 2px solid $green;
-      box-sizing: border-box;
-    }
-  }
-  figcaption {
-    font-size: 11px;
-    line-height: 16px;
-    vertical-align: middle;
-    color: $dark_gray;
-    text-align: center;
-    background: $green;
   }
 }
